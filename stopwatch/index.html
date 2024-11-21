@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer</title>
+</head>
+
+<body>
+    
+
+
+    <div id="timer">
+        <h2 id="question">結婚おめでとう！！</h2>
+        <div class="time">
+            <h1><span id="minute">00</span></h1>
+            <h1>:</h1>
+            <h1><span id="second">00</span></h1>
+            <h1>.</h1>
+            <h1><span id="millisecond">00</span></h1>
+        </div>
+        <div>
+            <button id="start">Start</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <audio id="sound-play" preload="auto">
+        <source src="lastbattle.wav" type="audio/mp3">
+    </audio>
+    <audio id="sound-normal" preload="auto">
+        <source src="normal.wav" type="audio/mp3">
+    </audio>
+    <audio id="sound-result" preload="auto">
+        <source src="result.wav" type="audio/mp3">
+    </audio>
+</body>
+
+</html>

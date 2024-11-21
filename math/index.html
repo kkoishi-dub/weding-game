@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フラッシュ暗算</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="timer">
+        <h1 id="timer-message">フラッシュ暗算</h1>
+        <h2 id="rule">ルール
+          <ul>
+            <li>これから2秒おきに数字が流れます。</li>
+            <li>全ての数字が流れた後に、全てを合計した数字を書いてください</li>
+            <li>正解者がいない場合、一番数字が近い人を勝ちとします。</li>
+          </ul>
+        </h2>
+        <button id="start-game">ゲーム開始</button>
+    </div>
+    <script src="script.js"></script>
+    <audio id="sound-normal" preload="auto">
+      <source src="horror.wav" type="audio/mp3">
+  </audio>
+</body>
+</html>

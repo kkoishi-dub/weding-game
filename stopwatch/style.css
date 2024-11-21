@@ -1,0 +1,89 @@
+body {
+    overflow: hidden;
+    font-family: 'Software Tester 7', sans-serif;
+    background: #496e6e;
+    align-items: center;
+    background: -webkit-radial-gradient(center, #496e6e 0%, #000000 100%);
+    background: -moz-radial-gradient(center, #496e6e 0%, #000000 100%);
+    background: radial-gradient(ellipse at center, #496e6e 0%, #000000 100%);
+    background-image: url('static.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+  }
+  button {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 15px 20px;
+    width: 1500px;
+    height: 600px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    font-weight: bold;
+    font-size: 180px;
+    border-radius: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button:hover {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+
+  #timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  #timer h1 {
+    user-select: none;
+    font-size: 7vw;
+    color:white;
+  }
+  #timer h2 {
+    user-select: none;
+    font-size: 2vw;
+    color:white;
+  }  
+  .time{
+    display: flex;
+  }
+  
+  #millisecond{
+    font-size: 5vw;
+  }
+  
+  @media(max-width:768px) {
+    #timer h1 {
+      font-size: 4rem;
+    }
+  }
+  
+  @media(max-width:480px) {
+    #timer h1 {
+      font-size: 3.5rem;
+    }
+  }
+  
+  @media(max-width:320px) {
+    #timer h1 {
+      font-size: 3rem;
+    }
+  }
+  
