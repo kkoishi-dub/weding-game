@@ -1,14 +1,14 @@
 const quizzes = [
-  { question: "Q1. 日本を英語で？", answer: "A. 東京" },
-  { question: "Q2. 2 + 2 = ?？", answer: "A. 4" },
-  { question: "Q3. 1年は何ヶ月？", answer: "A. 12" },
-  { question: "Q4. 今日は何月何日？", answer: "A. 11月30日" },
-  { question: "Q5. 新郎のフルネームは? (ひらがなでも可)", answer: "A. 武松駿也" },
-  { question: "Q6. 赤と青を混ぜると何色？", answer: "A. 紫" },
-  { question: "Q7. サッカーは何人制？", answer: "A. 11" },
-  { question: "Q8. 日本で一番高い山は？", answer: "A. 富士山" },
-  { question: "Q9. 新婦のフルネームは? (ひらがなでも可)", answer: "A. 式井千乃" },
-  { question: "Q10. 1時間は何秒？", answer: "A. 3600" }
+  { question: "Q01. 日本を英語で？", answer: "A. Japan" },
+  { question: "Q02. 新婦のフルネームは? (ひらがなでも可)", answer: "A. 式井千乃" },
+  { question: "Q03. 1年は何ヶ月？", answer: "A. 12" },
+  { question: "Q04. 今日は何月何日？", answer: "A. 11月30日" },
+  { question: "Q05. 赤と青を混ぜると何色？", answer: "A. 紫" },
+  { question: "Q06. サッカーは何人制？", answer: "A. 11" },
+  { question: "Q07. 日本で一番高い山は？", answer: "A. 富士山" },
+  { question: "Q08. 2 + 2 = ?？", answer: "A. 4" },
+  { question: "Q09. 1時間は何秒？", answer: "A. 3600" }
+  { question: "Q10. 新郎のフルネームは? (ひらがなでも可)", answer: "A. 武松駿也" },
 ];
 
 let currentQuizIndex = 0;
