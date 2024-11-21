@@ -24,18 +24,53 @@ button {
   background-color: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.8);
   padding: 15px 20px;
-  width: 1500px;
-  height: 600px;
+  width: 90vw; /* ビューポート幅の90% */
+  max-width: 1500px; /* 最大幅 */
+  height: 40vh; /* ビューポート高さの40% */
+  max-height: 600px; /* 最大高さ */
   cursor: pointer;
   transition: 0.3s ease-in;
   font-weight: bold;
-  font-size: 180px;
-  border-radius: 80px;
+  font-size: 10vw; /* ビューポート幅の10% */
+  border-radius: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
+/* 大きな画面用 */
+@media (min-width: 1024px) {
+  button {
+    font-size: 180px;
+    border-radius: 80px;
+  }
+}
+
+/* タブレット用 */
+@media (max-width: 1023px) and (min-width: 768px) {
+  button {
+    font-size: 120px;
+    border-radius: 60px;
+  }
+}
+
+/* スマートフォン用 */
+@media (max-width: 767px) {
+  button {
+    font-size: 60px;
+    border-radius: 40px;
+    height: 30vh;
+  }
+}
+
+/* 小さなスマートフォン用 */
+@media (max-width: 320px) {
+  button {
+    font-size: 40px;
+    border-radius: 20px;
+    height: 25vh;
+  }
+}
 button:hover {
   border: 2px solid white;
   background-color: rgba(255, 255, 255, 0.2);
