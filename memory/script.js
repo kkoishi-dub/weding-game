@@ -7,8 +7,8 @@ const quizzes = [
   { question: "Q06. サッカーは何人制？", answer: "A. 11" },
   { question: "Q07. 日本で一番高い山は？", answer: "A. 富士山" },
   { question: "Q08. 2 + 2 = ?？", answer: "A. 4" },
-  { question: "Q09. 1時間は何秒？", answer: "A. 3600" }
-  { question: "Q10. 新郎のフルネームは? (ひらがなでも可)", answer: "A. 武松駿也" },
+  { question: "Q09. 1時間は何秒？", answer: "A. 3600" },
+  { question: "Q10. 新郎のフルネームは? (ひらがなでも可)", answer: "A. 武松駿也" }
 ];
 
 let currentQuizIndex = 0;
