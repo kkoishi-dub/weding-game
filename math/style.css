@@ -38,6 +38,8 @@ button {
   justify-content: center;
 }
 
+
+
 /* 大きな画面用 */
 @media (min-width: 1024px) {
   button {
@@ -117,7 +119,37 @@ button:hover {
 }
 
 
+#quiz-number {
+  font-size: 20vw;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
 
+@media (min-width: 1024px) {
+  #quiz-number {
+    font-size: 400px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  #quiz-number {
+    font-size: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  #quiz-number {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+  #quiz-number {
+    font-size: 80px;
+  }
+}
 
 
 #score-display, #time-left {

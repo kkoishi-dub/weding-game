@@ -13,6 +13,7 @@ $(document).ready(function() {
   let sum=0;
   let message= '';
   let usedNumbers = new Set();
+  const $quizNumber = $('#quiz-number');
 
 
   $startButton.on('click', function(){
@@ -29,13 +30,46 @@ $(document).ready(function() {
     }
   });
 
+
   function startGame() {
     $rule.hide();
     $startButton.hide();
+    $quizDisplay.hide();
+    $quizNumber.show();
     currentQuizIndex = 0;
     $sound_normal[0].play();
     nextQuiz();
     gameInterval = setInterval(nextQuiz, 2000);
+  }
+  
+  function nextQuiz() {
+    if (currentQuizIndex > sum_num) {
+      endGame();
+      return;
+    }
+  
+    let num = generateUniqueNumber();
+    $quizNumber.text(num);
+    sum += num;
+    currentQuizIndex++;
+  }
+  
+  function endGame() {
+    clearInterval(gameInterval);
+    currentQuizIndex = 0;
+    $quizNumber.hide();
+    $quizDisplay.show().text('合計は？');
+    $startButton.show().text('答えを見る');
+  }
+  
+  function nextGame() {
+    currentQuizIndex = 0;
+    sum = 0;
+    $sound_normal[0].pause();
+    $sound_normal[0].currentTime = 0;
+    $quizNumber.hide();
+    $quizDisplay.show().text("フラッシュ暗算");
+    $startButton.show().text('ゲーム開始');
   }
 
   function generateUniqueNumber() {
@@ -50,43 +84,10 @@ $(document).ready(function() {
     return num;
   }
 
-  function nextQuiz() {
-    if (currentQuizIndex > sum_num) {
-      endGame();
-      return;
-    }
-
- 
-  
-    // message += num;
-    // if(currentQuizIndex!=sum_num){
-    //   message += ' + ';
-    // }
-  
-    let num = generateUniqueNumber();
-    $quizDisplay.text(num);
-    sum += num;
-    currentQuizIndex++;
-  }
-
   function showAnswer() {
     $startButton.text('もう一度プレイ');
     flag=3;
     $quizDisplay.html(sum);
   }
 
-  function endGame() {
-    clearInterval(gameInterval);
-    currentQuizIndex=0;
-    $quizDisplay.text('合計は？');
-    $startButton.show().text('答えを見る');
-  }
-  function nextGame() {
-    currentQuizIndex=0;
-    sum=0;
-    $sound_normal[0].pause();
-    $sound_normal[0].currentTime = 0;
-    $quizDisplay.text("フラッシュ暗算");
-    $startButton.show().text('ゲーム開始');
-  }
 });
